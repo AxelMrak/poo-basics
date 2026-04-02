@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class TrueFalseQuestion extends Question {
 
@@ -12,9 +12,9 @@ public class TrueFalseQuestion extends Question {
    * questions. It checks if the user's answer matches the correct answer,
    * ignoring case sensitivity.
    */
+
   @Override
   public boolean checkAnswer(String userAnswer) {
-
     String cleanedUserAnswer = userAnswer.trim().toLowerCase();
     boolean trueUserAnswer = cleanedUserAnswer.equals("verdadero") || cleanedUserAnswer.equals("v")
         || cleanedUserAnswer.equals("true");

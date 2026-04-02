@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public abstract class Question {
 
@@ -7,6 +7,7 @@ public abstract class Question {
    * through getter methods, and the correct answer is protected to prevent
    * unauthorized access from outside the class hierarchy.
    */
+
   private String questionText;
   private String correctAnswer;
 
@@ -28,5 +29,6 @@ public abstract class Question {
    * allowing different types of questions (e.g., multiple choice, true/false) to
    * implement their own logic.
    */
-  abstract boolean checkAnswer(String userAnswer);
+
+  public abstract boolean checkAnswer(String userAnswer);
 }

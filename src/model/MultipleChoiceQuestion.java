@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class MultipleChoiceQuestion extends Question {
   private String[] options;
@@ -13,8 +13,8 @@ public class MultipleChoiceQuestion extends Question {
   }
 
   public void showOptions() {
+    System.out.println("--- OPCIONES ---");
     for (int i = 0; i < options.length; i++) {
-      System.out.println("--- OPCIONES ---");
       System.out.println((i + 1) + ". " + options[i]);
     }
   }
@@ -25,6 +25,7 @@ public class MultipleChoiceQuestion extends Question {
    * questions. That logically is different from how other question types (like
    * true/false) might check answers, demonstrating polymorphic behavior.
    */
+
   @Override
   public boolean checkAnswer(String userAnswer) {
     String cleanedUserAnswer = userAnswer.trim().toLowerCase();
@@ -60,5 +61,4 @@ public class MultipleChoiceQuestion extends Question {
           "Respuesta inválida. Por favor, ingrese el texto de la respuesta o el número correspondiente a la opción.");
     }
   }
-
 }
